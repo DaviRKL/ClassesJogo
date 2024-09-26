@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Heroi {
+            constructor(nome, idade, tipo){
+                this.nome = nome;
+                this.idade = idade;
+                this.tipo = tipo;
+            }
+            atacar() {
+                var ataque = "";
+
+                switch(this.tipo.toLowerCase()){
+                    case "mago":
+                        ataque= "Usou magia"
+                        break;
+                    
+                    case "guerreiro":
+                        ataque= "Usou espada"
+                        break;
+
+                    case "monge":
+                        ataque= "Usou artes marciais"
+                        break;
+
+                    case "ninja":
+                        ataque= "shuriken"
+                        break;
+                }
+
+                console.log(`o ${this.tipo} atacou usando ${ataque}`)
+            }
+        }
+
+        const heroi1 = new Heroi("Arthur", 30, "Guerreiro");
+        const heroi2 = new Heroi("Merlin", 150, "Mago");
+        const heroi3 = new Heroi("Liu", 35, "Monge");
+        const heroi4 = new Heroi("Naruto", 18, "Ninja");
+
+       
+        heroi1.atacar(); 
+        heroi2.atacar();
+        heroi3.atacar(); 
+        heroi4.atacar(); 
+
+    </script>
+</body>
+</html>
